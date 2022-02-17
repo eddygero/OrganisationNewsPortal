@@ -1,11 +1,11 @@
 package models;
 
-public class News {
+public abstract class News {
     private int id;
     private String description;
     private String departmentid;
 
-    public News(String name ,String departmentid){
+    public News(String name, String departmentid, int user_id){
 
         this.departmentid = departmentid;
         this.description = name;
@@ -34,5 +34,15 @@ public class News {
 
     public String getDepartmentid() {
         return departmentid;
+    }
+
+    public abstract String getNews_type();
+
+    public byte getDepartment_id() {
+        return 0;
+    }
+
+    public byte getUser_id() {
+        return 0;
     }
 }
